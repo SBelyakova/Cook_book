@@ -22,8 +22,7 @@ def get_shop_list_by_dishes(dishes, person_count):
   cookbook = make_cook_book()
   shop_list = {}
   for dish in dishes:
-    for ingr in cookbook[dish]:
-      
+    for ingr in cookbook[dish]: 
       if ingr['ingredient_name'] not in shop_list.keys():
         ingr_list = {ingr['ingredient_name'] : {'measure':ingr['measure'], 'quantity':ingr['quantity'] * person_count}}
         shop_list.update(ingr_list)
